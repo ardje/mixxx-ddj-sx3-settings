@@ -2240,7 +2240,7 @@ PioneerDDJSX3.fxAssignButton = function(channel, control, value, status, group) 
     if (value) {
         if ((control >= 0x50) && (control <= 0x53)) {
             script.toggleControl("[EffectRack1_EffectUnit1]", "group_" + group + "_enable");
-        } else if ((control >= 0x54 && (control <= 0x57)) {
+        } else if ((control >= 0x54) && (control <= 0x57)) {
             script.toggleControl("[EffectRack1_EffectUnit2]", "group_" + group + "_enable");
 /*
         } else if ((control >= 0x70) && (control <= 0x73) && PioneerDDJSX3.shiftPanelSelectPressed) {
