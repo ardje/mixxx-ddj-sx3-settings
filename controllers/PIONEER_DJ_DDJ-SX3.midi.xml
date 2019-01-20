@@ -585,16 +585,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 3 assignment Deck 1, Button: FX1 assign Deck 1</description>
-                <status>0x96</status>
-                <midino>0x70</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit2]</group>
                 <key>PioneerDDJSX3.effectUnit[2].dryWetKnob.input</key>
                 <description>Dry/Wet Mixing Ratio of Effect Unit 2, Knob: FX2 BEATS</description>
@@ -899,7 +889,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 1, Button: FX2 assign Deck 1</description>
                 <status>0x96</status>
-                <midino>0x50</midino>
+                <midino>0x54</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -949,16 +939,6 @@
                 <key>PioneerDDJSX3.beatloopButtons</key>
                 <description>Beatloop Deck 1, Button: PAD5 (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x97</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 4 assignment Deck 1, Button: FX2 assign Deck 1</description>
-                <status>0x96</status>
                 <midino>0x54</midino>
                 <options>
                     <script-binding/>
@@ -1319,7 +1299,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 1 assignment Deck 1, Button: FX1 assign Deck 1</description>
                 <status>0x96</status>
-                <midino>0x4C</midino>
+                <midino>0x50</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2545,16 +2525,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 3 assignment Deck 4, Button: FX1 assign Deck 4</description>
-                <status>0x96</status>
-                <midino>0x73</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.jogPlatterTickShift</key>
                 <description>Jog fast Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
@@ -2909,7 +2879,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 4, Button: FX2 assign Deck 4</description>
                 <status>0x96</status>
-                <midino>0x53</midino>
+                <midino>0x57</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2919,16 +2889,6 @@
                 <key>PioneerDDJSX3.beatloopButtons</key>
                 <description>Beatloop Deck 1, Button: PAD8 (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x97</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 4 assignment Deck 4, Button: FX2 assign Deck 4</description>
-                <status>0x96</status>
                 <midino>0x57</midino>
                 <options>
                     <script-binding/>
@@ -3109,7 +3069,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 1 assignment Deck 4, Button: FX1 assign Deck 4</description>
                 <status>0x96</status>
-                <midino>0x4F</midino>
+                <midino>0x53</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4225,16 +4185,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 3 assignment Deck 3, Button: FX1 assign Deck 3</description>
-                <status>0x96</status>
-                <midino>0x72</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit2]</group>
                 <key>PioneerDDJSX3.effectUnit[2].knobs[1].inputMSB</key>
                 <description>FX2 Effect 1 Meta (MSB), Knob: FX2-1</description>
@@ -4399,7 +4349,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 3, Button: FX2 assign Deck 3</description>
                 <status>0x96</status>
-                <midino>0x52</midino>
+                <midino>0x56</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4409,16 +4359,6 @@
                 <key>PioneerDDJSX3.beatloopButtons</key>
                 <description>Beatloop Deck 1, Button: PAD7 (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x97</status>
-                <midino>0x56</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 4 assignment Deck 3, Button: FX2 assign Deck 3</description>
-                <status>0x96</status>
                 <midino>0x56</midino>
                 <options>
                     <script-binding/>
@@ -4529,7 +4469,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 1 assignment Deck 3, Button: FX1 assign Deck 3</description>
                 <status>0x96</status>
-                <midino>0x4E</midino>
+                <midino>0x52</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -5535,16 +5475,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 3 assignment Deck 2, Button: FX1 assign Deck 2</description>
-                <status>0x96</status>
-                <midino>0x71</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.clearHotCueButtons</key>
                 <description>Clear Hot-Cue 6 Deck 3, Button: SHIFT &amp; PAD6 (in HOT-CUE-Mode, Deck 3 active)</description>
@@ -5699,7 +5629,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 2, Button: FX2 assign Deck 2</description>
                 <status>0x96</status>
-                <midino>0x51</midino>
+                <midino>0x55</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -5709,16 +5639,6 @@
                 <key>PioneerDDJSX3.beatloopButtons</key>
                 <description>Beatloop Deck 1, Button: PAD6 (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x97</status>
-                <midino>0x55</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.fxAssignButton</key>
-                <description>Effect Unit 4 assignment Deck 2, Button: FX2 assign Deck 2</description>
-                <status>0x96</status>
                 <midino>0x55</midino>
                 <options>
                     <script-binding/>
@@ -5879,7 +5799,7 @@
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 1 assignment Deck 2, Button: FX1 assign Deck 2</description>
                 <status>0x96</status>
-                <midino>0x4D</midino>
+                <midino>0x51</midino>
                 <options>
                     <script-binding/>
                 </options>
