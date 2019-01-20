@@ -220,9 +220,9 @@ PioneerDDJSX3.init = function(id) {
 
     PioneerDDJSX3.fxUnitGroups = {
         '[EffectRack1_EffectUnit1]': 0x00,
-        '[EffectRack1_EffectUnit2]': 0x01,
+        '[EffectRack1_EffectUnit2]': 0x01/*,
         '[EffectRack1_EffectUnit3]': 0x02,
-        '[EffectRack1_EffectUnit4]': 0x03
+        '[EffectRack1_EffectUnit4]': 0x03*/
     };
 
     PioneerDDJSX3.fxEffectGroups = {
@@ -285,22 +285,22 @@ PioneerDDJSX3.init = function(id) {
         'shiftFx3on': 0x65,
         'fxTab': 0x4A,
         'shiftFxTab': 0x66,
-        'fx1assignDeck1': 0x4C,
-        'shiftFx1assignDeck1': 0x70,
-        'fx1assignDeck2': 0x4D,
-        'shiftFx1assignDeck2': 0x71,
-        'fx1assignDeck3': 0x4E,
-        'shiftFx1assignDeck3': 0x72,
-        'fx1assignDeck4': 0x4F,
-        'shiftFx1assignDeck4': 0x73,
-        'fx2assignDeck1': 0x50,
-        'shiftFx2assignDeck1': 0x54,
-        'fx2assignDeck2': 0x51,
-        'shiftFx2assignDeck2': 0x55,
-        'fx2assignDeck3': 0x52,
-        'shiftFx2assignDeck3': 0x56,
-        'fx2assignDeck4': 0x53,
-        'shiftFx2assignDeck4': 0x57,
+        'fx1assignDeck1': 0x50,
+        //'shiftFx1assignDeck1': 0x70,
+        'fx1assignDeck2': 0x51,
+        //'shiftFx1assignDeck2': 0x71,
+        'fx1assignDeck3': 0x53,
+        //'shiftFx1assignDeck3': 0x72,
+        'fx1assignDeck4': 0x54,
+        //'shiftFx1assignDeck4': 0x73,
+        'fx2assignDeck1': 0x54,
+        //'shiftFx2assignDeck1': 0x54,
+        'fx2assignDeck2': 0x55,
+        //'shiftFx2assignDeck2': 0x55,
+        'fx2assignDeck3': 0x56,
+        //'shiftFx2assignDeck3': 0x56,
+        'fx2assignDeck4': 0x57,
+        //'shiftFx2assignDeck4': 0x57,
         'masterCue': 0x63,
         'shiftMasterCue': 0x62,
         'loadDeck1': 0x46,
@@ -411,8 +411,8 @@ PioneerDDJSX3.init = function(id) {
 
     // init effects section:
     PioneerDDJSX3.effectUnit = [];
-    PioneerDDJSX3.effectUnit[1] = new components.EffectUnit([1, 3]);
-    PioneerDDJSX3.effectUnit[2] = new components.EffectUnit([2, 4]);
+    PioneerDDJSX3.effectUnit[1] = new components.EffectUnit([1]);
+    PioneerDDJSX3.effectUnit[2] = new components.EffectUnit([2]);
     PioneerDDJSX3.effectUnit[1].enableButtons[1].midi = [0x94, PioneerDDJSX3.nonPadLeds.fx1on];
     PioneerDDJSX3.effectUnit[1].enableButtons[2].midi = [0x94, PioneerDDJSX3.nonPadLeds.fx2on];
     PioneerDDJSX3.effectUnit[1].enableButtons[3].midi = [0x94, PioneerDDJSX3.nonPadLeds.fx3on];
@@ -1689,12 +1689,14 @@ PioneerDDJSX3.fxAssignLedControl = function(unit, ledNumber, active) {
     if (unit === "[EffectRack1_EffectUnit2]") {
         fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.fx2assignDeck1;
     }
+/*
     if (unit === "[EffectRack1_EffectUnit3]") {
         fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.shiftFx1assignDeck1;
     }
     if (unit === "[EffectRack1_EffectUnit4]") {
         fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.shiftFx2assignDeck1;
     }
+*/
 
     midi.sendShortMsg(
         fxAssignLedsBaseChannel,
@@ -2246,14 +2248,16 @@ PioneerDDJSX3.rotarySelectorShiftedClick = function(channel, control, value, sta
 
 PioneerDDJSX3.fxAssignButton = function(channel, control, value, status, group) {
     if (value) {
-        if ((control >= 0x4C) && (control <= 0x4F)) {
+        if ((control >= 0x50) && (control <= 0x53)) {
             script.toggleControl("[EffectRack1_EffectUnit1]", "group_" + group + "_enable");
-        } else if ((control >= 0x50) && (control <= 0x53)) {
+        } else if ((control >= 0x54 && (control <= 0x57)) {
             script.toggleControl("[EffectRack1_EffectUnit2]", "group_" + group + "_enable");
+/*
         } else if ((control >= 0x70) && (control <= 0x73) && PioneerDDJSX3.shiftPanelSelectPressed) {
             script.toggleControl("[EffectRack1_EffectUnit3]", "group_" + group + "_enable");
         } else if ((control >= 0x54) && (control <= 0x57) && PioneerDDJSX3.shiftPanelSelectPressed) {
             script.toggleControl("[EffectRack1_EffectUnit4]", "group_" + group + "_enable");
+*/
         }
     }
 };
