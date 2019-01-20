@@ -220,9 +220,7 @@ PioneerDDJSX3.init = function(id) {
 
     PioneerDDJSX3.fxUnitGroups = {
         '[EffectRack1_EffectUnit1]': 0x00,
-        '[EffectRack1_EffectUnit2]': 0x01/*,
-        '[EffectRack1_EffectUnit3]': 0x02,
-        '[EffectRack1_EffectUnit4]': 0x03*/
+        '[EffectRack1_EffectUnit2]': 0x01
     };
 
     PioneerDDJSX3.fxEffectGroups = {
@@ -1689,14 +1687,6 @@ PioneerDDJSX3.fxAssignLedControl = function(unit, ledNumber, active) {
     if (unit === "[EffectRack1_EffectUnit2]") {
         fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.fx2assignDeck1;
     }
-/*
-    if (unit === "[EffectRack1_EffectUnit3]") {
-        fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.shiftFx1assignDeck1;
-    }
-    if (unit === "[EffectRack1_EffectUnit4]") {
-        fxAssignLedsBaseControl = PioneerDDJSX3.nonPadLeds.shiftFx2assignDeck1;
-    }
-*/
 
     midi.sendShortMsg(
         fxAssignLedsBaseChannel,
