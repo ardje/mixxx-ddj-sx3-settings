@@ -43,6 +43,7 @@ local function output_xml()
 
 			control(c,"slicerButtons", "Slicer beatjump/loop Beat _P_ Deck _C_, Button: PAD_P_ (in SLICER-Mode, Deck _C_ active)",0x97+c-1,0x20+p-1,g)
 			control(c,"samplerVelocityVolume", "Sampler _P_ play with velocity volume, Button: PAD_P_ (in SAMPLER-Mode, VELOCITY active, Deck _C_ active)",0xb7+c-1,0x70+p-1,g)
+			control(c,"beatloopButtons","Beatloop Deck _C_, Button: PAD_P_ (in GROUP2-Mode->Saved loop, Deck _C_ active)",0x97+c+1,0x50+p-1,g)
 		end
 	end
 end
@@ -329,16 +330,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD6 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x55</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.filterKnobLSB</key>
                 <description>Filter Deck 3 (LSB), Knob: FILTER Deck 3</description>
@@ -369,31 +360,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD6 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x55</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Pad-Parameter Set (decrement), Button: PARAMETER1 LEFT (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x29</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD6 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x55</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -419,60 +390,10 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD6 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x55</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD2 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x51</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD2 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x51</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD2 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x51</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 1 assignment Deck 2, Button: FX1 assign Deck 2</description>
                 <status>0x96</status>
-                <midino>0x51</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD2 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
                 <midino>0x51</midino>
                 <options>
                     <script-binding/>
@@ -1330,40 +1251,10 @@ io.write(
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD7 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x56</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
                 <key>PioneerDDJSX3.filterKnobLSB</key>
                 <description>Filter Deck 4 (LSB), Knob: FILTER Deck 4</description>
                 <status>0xB6</status>
                 <midino>0x3A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD7 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x56</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD7 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x56</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1379,51 +1270,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD7 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x56</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD3 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x52</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD3 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x52</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>PioneerDDJSX3.effectUnit[1].knobs[3].inputLSB</key>
                 <description>FX1 Effect 3 Meta (LSB), Knob: FX1-3</description>
                 <status>0xB4</status>
                 <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD3 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x52</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1454,16 +1305,6 @@ io.write(
                 <description>Jog ring shift Deck 3, SHIFT left JOGDIALSIDE (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD3 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x52</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2410,80 +2251,10 @@ io.write(
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD8 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD8 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD8 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 4, Button: FX2 assign Deck 4</description>
                 <status>0x96</status>
                 <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD8 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD4 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x53</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD4 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x53</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD4 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x53</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2504,16 +2275,6 @@ io.write(
                 <description>High level Deck 3 (LSB), Knob: HI Deck 3</description>
                 <status>0xB2</status>
                 <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD4 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x53</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3549,16 +3310,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD5 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.filterKnobLSB</key>
                 <description>Filter Deck 2 (LSB), Knob: FILTER Deck 2</description>
@@ -3569,51 +3320,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD5 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD5 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.fxAssignButton</key>
                 <description>Effect Unit 2 assignment Deck 1, Button: FX2 assign Deck 1</description>
                 <status>0x96</status>
                 <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD5 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 4, Button: PAD1 (in GROUP2-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x50</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3639,31 +3350,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 2, Button: PAD1 (in GROUP2-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x50</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.headphoneCueButton</key>
                 <description>Toggles headphone cueing Deck 1, Button: CUE Deck 1</description>
                 <status>0x90</status>
                 <midino>0x54</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 3, Button: PAD1 (in GROUP2-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x50</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3704,16 +3395,6 @@ io.write(
                 <description>FX2 Effect 2 Meta (LSB), Knob: FX2-2</description>
                 <status>0xB5</status>
                 <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.beatloopButtons</key>
-                <description>Beatloop Deck 1, Button: PAD1 (in GROUP2-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x50</midino>
                 <options>
                     <script-binding/>
                 </options>
