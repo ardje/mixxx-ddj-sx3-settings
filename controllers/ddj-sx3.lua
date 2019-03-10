@@ -38,6 +38,11 @@ local function output_xml()
 
 			control(c,"hotCueButtons","Hot-Cue _P_ Deck _C_, Button: PAD_P_ (in HOT-CUE-Mode, Deck _C_ active)",0x97+c-1,0x00+p-1,g)
 			control(c,"clearHotCueButtons","Clear Hot-Cue _P_ Deck _C_, Button: SHIFT &amp; PAD_P_ (in HOT-CUE-Mode, Deck _C_ active)",0x97+c-1,0x08+p-1,g)
+			control(c,"samplerButtons","Sampler _P_ play, Button: PAD_P_ (in SAMPLER-Mode, Deck _C_ active)",0x97+c-1,0x30+p-1,g)
+			control(c,"stopSamplerButtons", "Sampler _P_ stop, Button: SHIFT &amp; PAD_P_ (in SAMPLER-Mode, Deck _C_ active)",0x97+c-1,0x38+p-1,g)
+
+			control(c,"slicerButtons", "Slicer beatjump/loop Beat _P_ Deck _C_, Button: PAD_P_ (in SLICER-Mode, Deck _C_ active)",0x97+c-1,0x20+p-1,g)
+			control(c,"samplerVelocityVolume", "Sampler _P_ play with velocity volume, Button: PAD_P_ (in SAMPLER-Mode, VELOCITY active, Deck _C_ active)",0xb7+c-1,0x70+p-1,g)
 		end
 	end
 end
@@ -104,16 +109,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 6 play, Button: PAD6 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.filterKnobMSB</key>
                 <description>Filter Deck 3 (MSB), Knob: FILTER Deck 3</description>
@@ -144,16 +139,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 6 play, Button: PAD6 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.parameterRight</key>
                 <description>Double beatjump_size, Button: PARAMETER2 RIGHT (in HOTCUE-Mode, Deck 1 active)</description>
@@ -164,41 +149,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 6 play, Button: PAD6 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.parameterRight</key>
                 <description>Double beatjump_size, Button: PARAMETER2 RIGHT (in HOTCUE-Mode, Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x09</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 6 play, Button: PAD6 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 2 play, Button: PAD2 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x31</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -224,16 +179,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 2 play, Button: PAD2 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.jogTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
@@ -244,41 +189,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 2 play, Button: PAD2 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.jogTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 2 play, Button: PAD2 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 6 stop, Button: SHIFT &amp; PAD6 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3D</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -314,31 +229,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 6 stop, Button: SHIFT &amp; PAD6 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3D</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.parameterRight</key>
                 <description>Change Pad-Parameter Set (increment), Button: PARAMETER1 RIGHT (in GROUP2-Mode, Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 6 stop, Button: SHIFT &amp; PAD6 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3D</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -354,151 +249,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 6 stop, Button: SHIFT &amp; PAD6 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3D</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 2 stop, Button: SHIFT &amp; PAD2 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x39</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 2 stop, Button: SHIFT &amp; PAD2 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x39</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 2 stop, Button: SHIFT &amp; PAD2 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x39</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 2 stop, Button: SHIFT &amp; PAD2 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x39</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 6 Deck 4, Button: PAD6 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 6 Deck 2, Button: PAD6 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 6 Deck 3, Button: PAD6 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 6 play with velocity volume, Button: PAD6 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 6 Deck 1, Button: PAD6 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 6 play with velocity volume, Button: PAD6 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 6 play with velocity volume, Button: PAD6 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 2 Deck 4, Button: PAD2 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Pad-Parameter Set (decrement), Button: PARAMETER1 LEFT (in ROLL-Mode, Deck 3 active)</description>
                 <status>0x92</status>
                 <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 6 play with velocity volume, Button: PAD6 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x35</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -514,16 +269,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 2 Deck 2, Button: PAD2 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Pad-Parameter Set (decrement), Button: PARAMETER1 LEFT (in ROLL-Mode, Deck 1 active)</description>
@@ -534,71 +279,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 2 Deck 3, Button: PAD2 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 2 play with velocity volume, Button: PAD2 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Pad-Parameter Set (decrement), Button: PARAMETER1 LEFT (in ROLL-Mode, Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x25</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 2 Deck 1, Button: PAD2 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 2 play with velocity volume, Button: PAD2 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 2 play with velocity volume, Button: PAD2 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 2 play with velocity volume, Button: PAD2 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x31</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1355,16 +1040,6 @@ io.write(
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 7 play, Button: PAD7 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
                 <key>PioneerDDJSX3.filterKnobMSB</key>
                 <description>Filter Deck 4 (MSB), Knob: FILTER Deck 4</description>
                 <status>0xB6</status>
@@ -1394,16 +1069,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 7 play, Button: PAD7 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.gridSlideButton</key>
                 <description>Move Beat-Grid 1 beat forward/backward with jogwheel Deck 1 (hold button), Button: left GRID SLIDE (Deck 1 active)</description>
@@ -1414,41 +1079,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 7 play, Button: PAD7 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.gridSlideButton</key>
                 <description>Move Beat-Grid 1 beat forward/backward with jogwheel Deck 2 (hold button), Button: right GRID SLIDE (Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x0A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 7 play, Button: PAD7 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 3 play, Button: PAD3 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x32</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1474,16 +1109,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 3 play, Button: PAD3 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x32</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>PioneerDDJSX3.effectUnit[1].knobs[3].inputMSB</key>
                 <description>FX1 Effect 3 Meta (MSB), Knob: FX1-3</description>
@@ -1499,16 +1124,6 @@ io.write(
                 <description>Jog touch (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 3 play, Button: PAD3 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x32</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1534,51 +1149,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 3 play, Button: PAD3 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x32</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 7 stop, Button: SHIFT &amp; PAD7 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3E</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 7 stop, Button: SHIFT &amp; PAD7 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3E</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>PioneerDDJSX3.effectUnit[1].knobs[1].inputMSB</key>
                 <description>FX1 Effect 1 Meta (MSB), Knob: FX1-1</description>
                 <status>0xB4</status>
                 <midino>0x02</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 7 stop, Button: SHIFT &amp; PAD7 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3E</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1594,136 +1169,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 7 stop, Button: SHIFT &amp; PAD7 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3E</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 3 stop, Button: SHIFT &amp; PAD3 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 3 stop, Button: SHIFT &amp; PAD3 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 3 stop, Button: SHIFT &amp; PAD3 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 3 stop, Button: SHIFT &amp; PAD3 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3A</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 7 Deck 4, Button: PAD7 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 7 Deck 2, Button: PAD7 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 7 Deck 3, Button: PAD7 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 7 play with velocity volume, Button: PAD7 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 7 Deck 1, Button: PAD7 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 7 play with velocity volume, Button: PAD7 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 7 play with velocity volume, Button: PAD7 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 3 Deck 4, Button: PAD3 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Slicer quantization (decrement), Button: PARAMETER1 LEFT (in SLICER-Mode, Deck 3 active)</description>
@@ -1734,31 +1179,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 7 play with velocity volume, Button: PAD7 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Slicer quantization (decrement), Button: PARAMETER1 LEFT (in SLICER-Mode, Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x26</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 3 Deck 2, Button: PAD3 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x22</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1784,31 +1209,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 3 Deck 3, Button: PAD3 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit2]</group>
                 <key>PioneerDDJSX3.effectUnit[2].knobs[3].inputLSB</key>
                 <description>FX2 Effect 3 Select (LSB), Knob: SHIFT + FX2-3</description>
                 <status>0xB5</status>
                 <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 3 play with velocity volume, Button: PAD3 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x32</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1824,51 +1229,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 3 Deck 1, Button: PAD3 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 3 play with velocity volume, Button: PAD3 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x32</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 3 play with velocity volume, Button: PAD3 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x32</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.toggleSamplerMode</key>
                 <description>Set PAD-Mode, Button: SAMPLER LEFT (Deck 3 active)</description>
                 <status>0x92</status>
                 <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 3 play with velocity volume, Button: PAD3 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x32</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2634,16 +1999,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 8 play, Button: PAD8 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.jogPlatterTickShift</key>
                 <description>Jog fast Deck 1, SHIFT left JOGDIAL (Deck 1 active)</description>
@@ -2684,31 +2039,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 8 play, Button: PAD8 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.playButton</key>
                 <description>Toggles Play/Pause Deck 1, Button: left PLAY (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x0B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 8 play, Button: PAD8 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x37</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2724,61 +2059,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 8 play, Button: PAD8 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 4 play, Button: PAD4 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 4 play, Button: PAD4 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 4 play, Button: PAD4 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.filterHighKnobMSB</key>
                 <description>High level Deck 3 (MSB), Knob: HI Deck 3</description>
                 <status>0xB2</status>
                 <midino>0x07</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 4 play, Button: PAD4 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x33</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2804,16 +2089,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 8 stop, Button: SHIFT &amp; PAD8 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.filterHighKnobMSB</key>
                 <description>High level Deck 2 (MSB), Knob: HI Deck 2</description>
@@ -2834,41 +2109,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 8 stop, Button: SHIFT &amp; PAD8 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 8 stop, Button: SHIFT &amp; PAD8 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.needleSearchStripPosition</key>
                 <description>Jump to track position (Needle Search) Deck 3, Touch: left NEEDLE SEARCH (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x03</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 8 stop, Button: SHIFT &amp; PAD8 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3F</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2889,16 +2134,6 @@ io.write(
                 <description>Jump to track position (Needle Search) Deck 1, Touch: left NEEDLE SEARCH (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x03</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 4 stop, Button: SHIFT &amp; PAD4 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3B</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2934,31 +2169,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 4 stop, Button: SHIFT &amp; PAD4 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.shiftButton</key>
                 <description>Shift Deck 1, Button: left SHIFT (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x3F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 4 stop, Button: SHIFT &amp; PAD4 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3B</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -2984,16 +2199,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 4 stop, Button: SHIFT &amp; PAD4 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.filterLowKnobMSB</key>
                 <description>Low level Deck 4 (MSB), Knob: LOW Deck 4</description>
@@ -3014,51 +2219,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 8 Deck 4, Button: PAD8 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.filterLowKnobMSB</key>
                 <description>Low level Deck 2 (MSB), Knob: LOW Deck 2</description>
                 <status>0xB1</status>
                 <midino>0x0F</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 8 Deck 2, Button: PAD8 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 8 Deck 3, Button: PAD8 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 8 play with velocity volume, Button: PAD8 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x37</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3074,16 +2239,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 8 Deck 1, Button: PAD8 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.filterMidKnobMSB</key>
                 <description>Mid level Deck 4 (MSB), Knob: MID Deck 4</description>
@@ -3094,41 +2249,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 8 play with velocity volume, Button: PAD8 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.filterMidKnobMSB</key>
                 <description>Mid level Deck 1 (MSB), Knob: MID Deck 1</description>
                 <status>0xB0</status>
                 <midino>0x0B</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 8 play with velocity volume, Button: PAD8 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 4 Deck 4, Button: PAD4 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x23</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3164,31 +2289,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 8 play with velocity volume, Button: PAD8 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x37</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Sampler bank (decrement), Button: PARAMETER1 LEFT (in SAMPLER-Mode, Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 4 Deck 2, Button: PAD4 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x98</status>
-                <midino>0x23</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -3204,71 +2309,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 4 Deck 3, Button: PAD4 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 4 play with velocity volume, Button: PAD4 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Change Sampler bank (decrement), Button: PARAMETER1 LEFT (in SAMPLER-Mode, Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x27</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 4 Deck 1, Button: PAD4 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 4 play with velocity volume, Button: PAD4 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 4 play with velocity volume, Button: PAD4 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x33</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 4 play with velocity volume, Button: PAD4 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x33</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4194,16 +3239,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 5 play, Button: PAD5 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.filterKnobMSB</key>
                 <description>Filter Deck 2 (MSB), Knob: FILTER Deck 2</description>
@@ -4214,71 +3249,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 5 play, Button: PAD5 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 5 play, Button: PAD5 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 5 play, Button: PAD5 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 1 play, Button: PAD1 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 1 play, Button: PAD1 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>PioneerDDJSX3.effectUnit[1].knobs[2].inputMSB</key>
                 <description>FX1 Effect 2 Meta (MSB), Knob: FX1-2</description>
                 <status>0xB4</status>
                 <midino>0x04</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 1 play, Button: PAD1 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x30</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4304,16 +3279,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerButtons</key>
-                <description>Sampler 1 play, Button: PAD1 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.gainKnobMSB</key>
                 <description>Gain Deck 4 (MSB), Knob: TRIM Deck 4</description>
@@ -4334,16 +3299,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 5 stop, Button: SHIFT &amp; PAD5 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x3C</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.gainKnobMSB</key>
                 <description>Gain Deck 2 (MSB), Knob: TRIM Deck 2</description>
@@ -4354,31 +3309,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 5 stop, Button: SHIFT &amp; PAD5 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x3C</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>PioneerDDJSX3.effectUnit[1].dryWetKnob.input</key>
                 <description>Dry/Wet Mixing Ratio of Effect Unit 1, Knob: FX1 BEATS</description>
                 <status>0xB4</status>
                 <midino>0x00</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 5 stop, Button: SHIFT &amp; PAD5 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x3C</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4404,16 +3339,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 5 stop, Button: SHIFT &amp; PAD5 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x3C</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.tempoSliderMSB</key>
                 <description>Tempo slider Deck 4 (MSB), Slider: right TEMPO (Deck 4 active)</description>
@@ -4434,61 +3359,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 1 stop, Button: SHIFT &amp; PAD1 (in SAMPLER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x38</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.tempoSliderMSB</key>
                 <description>Tempo slider Deck 2 (MSB), Slider: right TEMPO (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x00</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 1 stop, Button: SHIFT &amp; PAD1 (in SAMPLER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x38</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 1 stop, Button: SHIFT &amp; PAD1 (in SAMPLER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x38</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.stopSamplerButtons</key>
-                <description>Sampler 1 stop, Button: SHIFT &amp; PAD1 (in SAMPLER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x38</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 5 Deck 4, Button: PAD5 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x24</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4514,41 +3389,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 5 Deck 2, Button: PAD5 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJSX3.reverseButton</key>
                 <description>Play track backwards (reverse play) Deck 1, Button: SHIFT &amp; left CENSOR (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x38</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 5 Deck 3, Button: PAD5 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 5 play with velocity volume, Button: PAD5 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x34</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4564,46 +3409,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 5 Deck 1, Button: PAD5 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 5 play with velocity volume, Button: PAD5 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 5 play with velocity volume, Button: PAD5 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 1 Deck 4, Button: PAD1 (in SLICER-Mode, Deck 4 active)</description>
-                <status>0x9A</status>
-                <midino>0x20</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel3]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Beatjump amount of beatjump_size backwards, Button: PARAMETER1 LEFT (in HOTCUE-Mode, Deck 3 active)</description>
@@ -4614,31 +3419,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 5 play with velocity volume, Button: PAD5 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x34</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel4]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Beatjump amount of beatjump_size backwards, Button: PARAMETER1 LEFT (in HOTCUE-Mode, Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 1 Deck 2, Button: PAD1 (in SLICER-Mode, Deck 2 active)</description>
-                <status>0x98</status>
-                <midino>0x20</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4664,16 +3449,6 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 1 Deck 3, Button: PAD1 (in SLICER-Mode, Deck 3 active)</description>
-                <status>0x99</status>
-                <midino>0x20</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EffectRack1_EffectUnit2]</group>
                 <key>PioneerDDJSX3.effectUnit[2].knobs[2].inputLSB</key>
                 <description>FX2 Effect 2 Select (LSB), Knob: SHIFT + FX2-2</description>
@@ -4684,51 +3459,11 @@ io.write(
                 </options>
             </control>
             <control>
-                <group>[Channel4]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 1 play with velocity volume, Button: PAD1 (in SAMPLER-Mode, VELOCITY active, Deck 4 active)</description>
-                <status>0xBA</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>PioneerDDJSX3.parameterLeft</key>
                 <description>Beatjump amount of beatjump_size backwards, Button: PARAMETER1 LEFT (in HOTCUE-Mode, Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x24</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.slicerButtons</key>
-                <description>Slicer beatjump/loop Beat 1 Deck 1, Button: PAD1 (in SLICER-Mode, Deck 1 active)</description>
-                <status>0x97</status>
-                <midino>0x20</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 1 play with velocity volume, Button: PAD1 (in SAMPLER-Mode, VELOCITY active, Deck 2 active)</description>
-                <status>0xB8</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 1 play with velocity volume, Button: PAD1 (in SAMPLER-Mode, VELOCITY active, Deck 3 active)</description>
-                <status>0xB9</status>
-                <midino>0x30</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -4749,16 +3484,6 @@ io.write(
                 <description>Set PAD-Mode, Button: SLICER RIGHT (Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x20</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJSX3.samplerVelocityVolume</key>
-                <description>Sampler 1 play with velocity volume, Button: PAD1 (in SAMPLER-Mode, VELOCITY active, Deck 1 active)</description>
-                <status>0xB7</status>
-                <midino>0x30</midino>
                 <options>
                     <script-binding/>
                 </options>
